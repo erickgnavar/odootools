@@ -32,6 +32,6 @@ Clone this repo somewhere
 
 ## TODO
 
-- [ ] Go to view line after open buffer
+- [X] Go to view line after open buffer
 - [ ] Add snippets for python and xml modes
 - [ ] Find Odoo models by model ID

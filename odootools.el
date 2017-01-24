@@ -50,8 +50,11 @@
 
 (defun odootools--open-view-file (candidate)
   "Open buffer with selected file as CANDIDATE."
-  (let ((path (car (split-string candidate ";"))))
-    (find-file-existing path)))
+  (let ((path (car (split-string candidate ";")))
+        (view-id (car (cdr (split-string candidate ";")))))
+    (find-file-existing path)
+    (goto-line 0)
+    (search-forward (concat "id=\"" view-id "\""))))
 
 (defun odootools--group-transformer (candidate)
   "Format candidate as CANDIDATE."
