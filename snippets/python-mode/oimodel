@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: Odoo Inherit Model
+# key: oimodel
+# group: Odoo
+# --
+class ${1:$(odootools--yas-capitalize-dot-name yas-text)}(models.Model):
+
+    _inherit = '$1'
+
+    $0

@@ -29,9 +29,18 @@ Clone this repo somewhere
 - For search and open view file `odootools-find-view-file`
 - For rebuild the db db use `odootools-rebuild-db`
 
+## Snippets
+
+Require `yasnippets` package
+
+- `omodel`: Expand a model definition
+- `oimodel`: Expand a inherit model definition
+- `otmodel`: Expand a transient model definition
+
 
 ## TODO
 
 - [X] Go to view line after open buffer
-- [ ] Add snippets for python and xml modes
+- [X] Add snippets for python mode
+- [ ] Add snippets for xml mode
 - [ ] Find Odoo models by model ID

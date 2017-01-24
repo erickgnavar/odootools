@@ -128,6 +128,24 @@
   (helm :sources (odootools--views-open-source)
         :buffer "*helm for search view file*"))
 
+;; Yasnippets conf
+
+(defun odootools--yas-capitalize-dot-name (name)
+  "Allow convert a dot model name to camelcase as NAME."
+  (mapconcat 'identity (mapcar (lambda (n) (capitalize n)) (split-string name "\\.")) ""))
+
+(defun odootools--initialize-snippets ()
+  "Load snippets."
+  (let ((snip-dir (expand-file-name "snippets" odootools--package-root)))
+    (when (boundp 'yas-snippet-dirs)
+      (add-to-list 'yas-snippet-dirs snip-dir t))
+    (yas-load-directory snip-dir)))
+
+(eval-after-load 'yasnippet
+  '(odootools--initialize-snippets))
+
+(require 'yasnippet)
+
 (provide 'odootools)
 
 ;;; odootools.el ends here
