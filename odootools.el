@@ -18,7 +18,9 @@
 
 (defconst odootools--views-db (f-join odootools-addons-path ".views"))
 
-(defconst odootools--analyzer-path (concat (file-name-directory load-file-name) "analyzer.py"))
+(defconst odootools--package-root (file-name-directory load-file-name))
+
+(defconst odootools--analyzer-path (f-join odootools--package-root "analyzer.py"))
 
 (defun odootools--read-groups-db ()
   "Read groups db."
